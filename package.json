@@ -1,7 +1,7 @@
 {
   "name": "astra",
   "version": "0.1.0",
-  "homepage": "https://hashirp1.github.io/astra-dashboard",
+  "homepage": "https://hashirp1.github.io/drone",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
