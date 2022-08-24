@@ -1,0 +1,272 @@
+@import "./astra_fonts.scss";
+
+// ======================================= ASTRA THEME VARIABLES =======================================
+
+// Fonts
+$_primary_font: "Ubuntu";
+
+// Colors
+$_black: #000;
+$_white: #fff;
+$_whtie-10: rgba(255,255,255,0.1);
+$_whtie-20: rgba(255,255,255,0.2);
+$_whtie-30: rgba(255,255,255,0.3);
+$_whtie-40: rgba(255,255,255,0.4);
+$_whtie-50: rgba(255,255,255,0.5);
+$_whtie-60: rgba(255,255,255,0.6);
+$_whtie-70: rgba(255,255,255,0.7);
+$_whtie-80: rgba(255,255,255,0.8);
+$_whtie-90: rgba(255,255,255,0.9);
+$_primary_color: linear-gradient(270deg, #FD334D 3.57%, #FD5B16 97.53%);
+$_primary_color-reverse: linear-gradient(270deg, #FD5B16 3.57%, #FD334D 97.53%);
+$_orange: #FD5B16;
+$_red: #FD334D;
+$_light: #969696;
+$_secondary_color: #1D1D1B;
+$_success_color: #198754;
+$_warning_color: #ffc107;
+$_danger_color: #dc3545;
+$_info_color: #0DCAEF;
+
+$_chart_1: #7F4EFF;
+$_chart_2: #FF5200;
+$_chart_3: #00A651;
+$_chart_4: #F50342;
+$_chart_5: #828282;
+$_chart_6: #FFB700;
+$_chart_7: #ACCE08;
+$_chart_8: #5D5FEF;
+$_chart_9: #8EB3F4;
+
+//Font Size
+$_base_font_size: 13px;
+$_h1: 2.615em;
+$_h2: 1.692em;
+$_h3: 1.538em;
+$_h4: 1.385em;
+$_h5: 1.231em;
+$_h6: 1.077em;
+$_heading-letter-spacing: -1px;
+$_font-size-15: 1.154em;
+
+//Font Weight
+$_font_light: 300;
+$_font_normal: 400;
+$_font_medium: 500;
+$_font_bold: 600;
+
+//Positions
+$_position_fixed: fixed;
+$_position_relative: relative;
+$_position_absolute: absolute;
+
+//Genral
+$_w_100: 100%;
+$_h_100: 100%;
+$_text-decoration_none: none;
+$_p_0: 0;
+$_m_0: 0;
+$_list_style_type_none: none;
+$_border-0: 0;
+$_h_60: 60px;
+$_h_40: 40px;
+$_h_30: 30px;
+$_text-upper-case: uppercase;
+$_shadow: 0px 15px 30px rgba(255, 100, 0, 0.3);
+$_no_bg: none;
+
+//Extend
+%animation {
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+
+%no-p-m {
+    padding: $_p_0;
+    margin: $_m_0;
+}
+
+%list_style_type_none {
+    list-style: $_list_style_type_none;
+}
+
+// Mixin
+@mixin theme($theme: $_black) {
+    background: $theme;    
+    color: $_white;
+    font-family: $_primary_font;
+    font-size: $_base_font_size;
+}
+
+@mixin link {
+    color: $_orange;
+    text-decoration: $_text-decoration_none;
+    @extend %animation;
+}
+
+@mixin astraBtn {
+    border: $_border-0;
+    height: $_h_60;    
+    font-weight: $_font_bold;
+    text-transform: $_text-upper-case;
+    font-size: $_font-size-15;
+    line-height: $_h_60;
+    padding-top: 0;
+    padding-bottom: 0;    
+    color: $_white;
+    padding-left: 30px;
+    padding-right: 30px;
+    @extend %animation;
+}
+
+@mixin astraBtnLg {
+    height: $_h_40;
+    line-height: $_h_40;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: $_base_font_size;
+    font-weight: $_font_bold;
+    text-transform: $_text-upper-case;
+}
+
+@mixin astraBtnPrimary {
+    background: $_primary_color;
+    box-shadow: $_shadow !important;    
+}
+
+@mixin astraBtn-hover {
+    background: $_primary_color-reverse;    
+}
+
+@mixin astraBtnSec {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    background: $_secondary_color;
+    border: 1px solid $_whtie-20;
+
+    &:hover {
+        background: $_whtie-20;
+    }
+
+}
+
+@mixin astraBtnLight {
+    background: $_light;
+    color: $_black;
+}
+
+@mixin astraBtnLink {
+    color: $_orange;
+    padding: $_p_0;
+    text-decoration: $_text-decoration_none;
+    text-transform: none;
+
+    &:hover {
+        color: $_red;
+    }
+}
+
+@mixin astraBtnSm {
+    height: $_h_30;
+    line-height: $_h_30;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: $_base_font_size;
+    font-weight: $_font_bold;
+    text-transform: $_text-upper-case;    
+}
+
+@mixin astraBtn-outline {
+    background: $_no_bg;
+    border: 1px solid $_orange;    
+    color: $_orange;
+    @extend %animation;
+
+    &:hover {
+        background: $_primary_color;
+        border: 1px solid $_orange;
+    }
+
+}
+
+@mixin astraBtn-outline-hover {
+    border: 1px solid $_orange;
+    background: $_primary_color;
+}
+
+@mixin astraBtnSec-outline {
+    border: 1px solid $_whtie-20 !important;
+
+    &:hover {
+        background: $_secondary_color;
+    }
+}
+
+@mixin astraBtnSucc-outline {
+    border: 1px solid $_success_color;
+
+    &:hover {
+        background: $_success_color;
+    }
+}
+
+@mixin astraBtnWarn-outline {
+    border: 1px solid $_warning_color;
+
+    &:hover {
+        background: $_warning_color;
+    }
+}
+
+@mixin astraBtnDanger-outline {
+    border: 1px solid $_danger_color;
+
+    &:hover {
+        background: $_danger_color;
+    }
+}
+
+@mixin astraBtnInfo-outline {
+    border: 1px solid $_info_color;
+
+    &:hover {
+        background: $_info_color;
+    }
+}
+
+@mixin astraBtnLight-outline {
+    border: 1px solid $_light;
+
+    &:hover {
+        background: $_light;
+    }
+}
+
+@mixin astraBtnDark-outline {
+    border: 1px solid $_black;
+
+    &:hover {
+        background: $_whtie-10;
+    }
+}
+
+@mixin astraInput {
+    background: $_black;
+    border: 1px solid $_whtie-20;
+    border-radius: 10px;
+    padding: 20px !important;
+    height: auto !important;
+    color: $_white;
+    font-size: $_base_font_size;
+    margin: 0;
+    
+    &:hover, &:focus {
+        border: 1px solid $_orange;
+        background: $_black;
+        box-shadow: none;
+        color: $_white;    
+    }
+}

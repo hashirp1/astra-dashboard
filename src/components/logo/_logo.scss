@@ -1,0 +1,29 @@
+@import '../../css/astra_variable.scss';
+
+$base-size: 70px;
+
+.astra-logo {
+
+    max-width: $base-size; 
+    
+    &.md {
+        max-width: $base-size + 30px; 
+    }
+    
+    &.lg {
+        max-width: $base-size + 60px; 
+    }    
+    
+    &.xl {
+        max-width: $base-size + 90px; 
+    }
+    
+    &.xxl {
+        max-width: $base-size + 120px; 
+    }
+
+    &.xxxl {
+        max-width: $base-size + 150px; 
+    }
+
+}

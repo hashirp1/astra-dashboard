@@ -1,0 +1,60 @@
+@import "../../css/astra_variable.scss";
+
+$_b_h_100: 100vh;
+
+@mixin checkbox-custom {
+  accent-color: $_orange;
+  border-radius: 7px;
+  width: 22px;
+  height: 22px;
+  appearance: auto;
+}
+
+.login-page-height {
+  height: $_b_h_100;
+
+  .login-left-col {
+    padding-left: 48px;
+    padding-top: 29px;
+    h2 {
+      background: $_primary_color;
+      text-align: center;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .login-right-col {
+    background: url("../../assets/images/login-right.png") no-repeat center
+      center;
+    background-size: cover;
+    .spacing{
+      margin-top: 20px;
+    }
+    .form-control{
+      line-height: unset;
+    }
+    .form-check {
+      [type="checkbox"] {
+        @include checkbox-custom;
+      }
+      label {
+        margin-left: 10px;
+        vertical-align: sub;
+      }
+    }
+    .form-check-input {
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    .text-gradient {
+      background: $_primary_color;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .login-btn{
+      margin-top: 40px;
+    }
+  }
+}

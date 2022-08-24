@@ -1,0 +1,233 @@
+@import "./astra_variable.scss";
+
+// ======================================= ASTRA THEME =======================================
+
+html {
+    body {
+        @include theme;        
+
+        ul, li {
+            @extend %no-p-m;
+            @extend %list_style_type_none;
+        }
+
+        img {
+            max-width: $_w_100;
+        }
+
+        a, .nav-link {
+            @include link;
+            @extend %no-p-m;
+        
+            &:hover {
+                color: $_red;
+            }
+            
+        }
+
+        .primary-color {
+            color: $_primary_color;
+        }
+
+        .primary-bg {
+            background: $_primary_color;
+        }
+
+        .black-color {
+            background: $_black;
+        }
+
+        .black-bg {
+            background: $_black;
+            color: $_white;
+        }
+
+        .orange-color {
+            color: $_orange;
+        }
+
+        .orange-bg {
+            background: $_orange;
+        }
+
+        .red-color {
+            color: $_red;
+        }
+
+        .red-bg {
+            background: $_red;
+        }
+
+        .white-color {
+            color: $_white;
+        }
+
+        .white-bg {
+            background: $_white;
+            color: $_black;
+        }        
+
+        .border-1px-solid-white-20 {
+            border: 1px solid $_whtie-20;
+        }
+
+        .chart-color-1 {
+            background: $_chart_1;
+        }
+
+        .chart-color-2 {
+            background: $_chart_2;
+        }
+
+        .chart-color-3 {
+            background: $_chart_3;
+        }
+
+        .chart-color-4 {
+            background: $_chart_4;
+        }
+
+        .chart-color-5 {
+            background: $_chart_5;
+        }
+
+        .chart-color-6 {
+            background: $_chart_6;
+        }
+
+        .chart-color-7 {
+            background: $_chart_7;
+        }
+
+        .chart-color-8 {
+            background: $_chart_8;
+        }
+
+        .chart-color-9 {
+            background: $_chart_9;
+        }
+
+        .astra-btn {
+            @include astraBtn;
+
+            &:hover {
+                
+            }
+
+            &:focus, &:active {
+                @include astraBtn;    
+            }
+        }
+
+        .astra-btn-outline {
+            @include astraBtn-outline;
+
+            &:hover {
+                @include astraBtn-outline-hover;
+            }
+        }
+
+        .white-link {
+            color: $_white;
+
+            &:hover {
+                color: $_whtie-60;
+            }
+        }
+
+        .DocSearch-Button {            
+            
+            @include astraInput;
+
+            .DocSearch-Search-Icon {
+                color: $_light !important;
+            }
+        
+            .DocSearch-Button-Placeholder {
+                font-size: $_base_font_size;
+                color: $_light !important;
+            }
+        }
+
+        .form-control {
+            @include astraInput;
+        }
+
+        .form-floating {
+            label {
+                padding: 20px !important;
+                color: $_light;
+                opacity: 1 !important;
+            }
+            input {
+                padding: 28px 20px 12px !important;
+                font-weight: $_font_medium;
+            }
+        }
+
+        .btn {
+            @include astraBtn;                        
+        }
+        
+        .btn-lg {
+            @include astraBtnLg;
+        }
+
+        .btn-primary {
+            @include astraBtnPrimary;
+
+            &:hover {
+                @include astraBtn-hover;
+            }
+        }
+        
+        .btn-secondary {
+            @include astraBtnSec;
+        }
+
+        .btn-light {
+            @include astraBtnLight;
+        }
+
+        .btn-link {
+            @include astraBtnLink;
+        }
+
+        .btn-sm {
+            @include astraBtnSm;
+        }
+
+        .btn-outline-primary {
+            @include astraBtn-outline;
+        }
+
+        .btn-outline-secondary {
+            @include astraBtnSec-outline;
+        }
+
+        .btn-outline-success {
+            @include astraBtnSucc-outline;
+        }
+
+        .btn-outline-warning {
+            @include astraBtnWarn-outline;
+        }
+
+        .btn-outline-danger {
+            @include astraBtnDanger-outline;
+        }
+
+        .btn-outline-info {
+            @include astraBtnInfo-outline;
+        }
+
+        .btn-outline-light {
+            @include astraBtnLight-outline;
+        }
+
+        .btn-outline-dark {
+            @include astraBtnDark-outline;
+        }
+
+    }
+}
