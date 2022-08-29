@@ -15,100 +15,10 @@ $_orange_status: #fd713a;
   font-size: 13px;
   margin-top: 11px;
 }
-.dashboard-head {
-  border-bottom: 1px solid $_border-color;
-  img {
-    padding: 35px 0px;
-  }
-  .bread-crumb {
-    display: flex;
-    align-items: center;
-    border-left: 1px solid $_border-color;
-    padding: 35px 30px;
-    color: $_whtie-60;
-    p {
-      margin-bottom: 0;
-      font-size: 13px;
-      margin-right: 5px;
-      padding-left: 3px;
-      padding-right: 3px;
-      &:last-child {
-        font-size: 24px;
-        padding-left: 5px;
-        color: white;
-      }
-    }
-  }
-}
+
 .dashboard-body {
   min-height: calc(100vh - 110px);
-  .sidebar-left {
-    border-right: 1px solid $_border-color;
-    padding-top: 20px !important;
-    .side-menu {
-      display: flex;
-      align-items: center;
-      padding: 15px 5px;
-      cursor: pointer;
-      .width-min {
-        text-align: center;
-        min-width: 20%;
-      }
-      .width-2 {
-        min-width: 60%;
-        text-align: left;
-        padding-right: 4px;
-      }
-      p {
-        margin-bottom: 0;
-      }
-      &.not-selected {
-        p {
-          color: $_whtie-60;
-        }
-      }
-      .primary-badge {
-        @include astraBtnPrimary;
-      }
-    }
-    .main-bottom {
-      padding: 29px 32px;
-      border-top: 1px solid $_border-color;
-      margin-top: 10px;
-      .profile-part {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        img {
-          margin-right: 12px;
-          height: 36px;
-          width: 36px;
-        }
-        .right-part {
-          p {
-            margin-bottom: 4px;
-            text-align: left;
-            &:last-child {
-              color: $_whtie-60;
-              margin-bottom: 0;
-            }
-          }
-        }
-      }
-      .menu-icon {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        img {
-          margin-right: 14px;
-        }
-        p {
-          color: $_whtie-60;
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
+
   .content-body {
     padding: 20px 29px;
     .top-filter {
@@ -286,7 +196,8 @@ $_orange_status: #fd713a;
 .input-icon {
   position: relative;
   &.select-arrow {
-    background: url("../../assets/images/chevron-down.png") no-repeat right;
+    background: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0.75L6.375 6.375L0.75 0.75' stroke='%23969696' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      no-repeat right;
     background-position: 95%;
   }
 
@@ -308,20 +219,21 @@ $_orange_status: #fd713a;
     }
   }
   &.select-arrow {
-    width: 100%;
     .input-img {
-      left: 15px;
+      left: 21px;
+      top: 18px;
     }
   }
   .form-select {
     padding: 13px !important;
     width: 100%;
+    min-height: 62px !important;
   }
 }
 .btn-part button {
   font-weight: 500 !important;
   font-size: 13px !important;
-  min-width: fit-content;
+  min-width: 120px;
   border-radius: 10px;
   text-transform: capitalize;
   white-space: nowrap;

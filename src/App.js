@@ -14,6 +14,7 @@ import Register from "./pages/drone/register";
 import Request from "./pages/flightsimulation/request";
 import Approved from "./pages/flightsimulation/approved";
 import Permission from "./pages/drone/permission";
+import Dashboard from "./pages/dashboard/dashboard";
 const App = () => {
   return (
     <BrowserRouter>
@@ -35,6 +36,9 @@ const App = () => {
         </Route>
         <Route path="/permission" element={<Layout />}>
           <Route index element={<Permission />} />
+        </Route>
+        <Route path="/dashboard" element={<Layout />}>
+          <Route index element={<Dashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>
